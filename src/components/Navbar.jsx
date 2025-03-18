@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import React from "react";
 
+
 const Navbar = ({ cartCount, toggleCart, searchQuery, setSearchQuery }) => {
     const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
@@ -8,11 +9,24 @@ const Navbar = ({ cartCount, toggleCart, searchQuery, setSearchQuery }) => {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrollPosition(window.scrollY);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
     return (
         <>
 
-            <nav className='navbar'>
+            <nav className='navbar' style={{
+        backgroundColor: scrollPosition > 100 ? '#333' : 'transparent',
+      }}>
 
 
 

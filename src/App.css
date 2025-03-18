@@ -17,6 +17,7 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
+  position: relative;
   justify-content: space-around;
   align-items: center;
   padding: 1rem 1rem;
@@ -25,6 +26,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid #ff4d4d;
 }
+
 
 /* Hamburger Menu */
 .hamburger-menu {
@@ -164,7 +166,7 @@ body {
   }
 
   .search-bar input {
-    width: 100%;
+    width: 70%;
     /* Full-width search bar */
   }
 
@@ -210,6 +212,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 250px;
+  max-height: 400px;
   margin: 0 auto;
 }
 
@@ -227,7 +230,7 @@ body {
 
 .product-title {
   font-size: 1rem;
-  margin: 0.5rem 0;
+  margin: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

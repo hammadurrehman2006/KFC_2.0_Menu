@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import React from "react";
 
 const Navbar = ({ cartCount, toggleCart, searchQuery, setSearchQuery }) => {
@@ -10,8 +11,11 @@ const Navbar = ({ cartCount, toggleCart, searchQuery, setSearchQuery }) => {
 
     return (
         <>
-            {/* Top Navbar */}
-            <nav className="navbar">
+
+            <nav className='navbar'>
+
+
+
                 {/* Hamburger Menu (Visible only on Mobile) */}
                 <div className="hamburger-menu" onClick={toggleSidebar}>
                     ☰
